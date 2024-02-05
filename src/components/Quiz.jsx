@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export default function Quiz() {
-  return (
-    <div>Quzi</div>
-  )
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+  const [userAnswers, setUserAnswers ] = useState([]);
+  
+  return <div></div>;
 }
