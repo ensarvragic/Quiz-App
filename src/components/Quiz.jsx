@@ -4,6 +4,9 @@ import QUESTIONS from "../question";
 export default function Quiz() {
   const [userAnswers, setUserAnswers] = useState([]);
   const activeQuestionIndex = userAnswers.length;
+  const shuffledAnswers = [...QUESTIONS[activeQuestionIndex].answers]
+  
+  shuffledAnswers.sort();
 
   const handleSelectAnswer = (selectedAnswer) => {
     setUserAnswers((prevUserAnswers) => {
