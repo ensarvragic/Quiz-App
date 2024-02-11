@@ -6,7 +6,6 @@ import QUESTTIONS from "../question.js";
 export default function Question({
   key,
   onSelectAnswer,
-  selectedAnswer,
   onSkip,
 }) {
   const [answer, setAnswer] = useState({
@@ -44,7 +43,7 @@ export default function Question({
       <h2>{QUESTTIONS[key].text}</h2>
       <Answers
         answers={QUESTTIONS[key].answers}
-        selectedAnswer={selectedAnswer}
+        selectedAnswer={answer.selectedAnswer}
         answerState={answerState}
         onSelect={handleSelectAnswer}
       />
