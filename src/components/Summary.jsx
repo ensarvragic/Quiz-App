@@ -3,6 +3,9 @@ import quziCompleteImg from "../assets/quiz-complete.png";
 import QUESTIONS from "../question.js";
 
 export default function Summary({ userAnswers }) {
+    const skippedAnswers = userAnswers
+
+
   return (
     <div id="summary">
       <img src={quziCompleteImg} />
@@ -26,11 +29,11 @@ export default function Summary({ userAnswers }) {
           let cssClass = "user-answer";
 
           if (answer === null) {
-            cssClass += "skipped";
+            cssClass += " skipped";
           } else if (answer === QUESTIONS[index].answers[0]) {
-            cssClass += "correct";
+            cssClass += " correct";
           } else {
-            cssClass += "wrong";
+            cssClass += " wrong";
           }
 
           return (
