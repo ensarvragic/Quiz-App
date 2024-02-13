@@ -19,6 +19,16 @@ export default function Question({
       isCorrect: null,
     });
 
+    let timer = 10000;
+
+    if(answer.selectedAnswer) {
+      timer = 1000;
+    }
+
+    if(answer.isCorrect !== null){
+      timer = 2000;
+    }
+
     setTimeout(() => {
       setAnswer({
         selectedAnswer: answer,
